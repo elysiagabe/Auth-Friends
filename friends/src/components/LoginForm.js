@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
+import { FriendContext } from '../contexts/FriendContext';
 
 const LoginForm = (props) => {
+    const { setLoggedIn } = useContext(FriendContext);
+
     const [credentials, setCredentials] = useState({
         username: '',
         password: ''
@@ -22,6 +25,7 @@ const LoginForm = (props) => {
                 console.log(res);
                 localStorage.setItem('token', res.data.payload);
                 props.history.push('/friends');
+                setLoggedIn(true);
             })
             .catch(err => console.log('There was an error logging in: ', err))
     }

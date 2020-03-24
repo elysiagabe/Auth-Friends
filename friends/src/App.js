@@ -14,16 +14,18 @@ import { axiosWithAuth } from './utils/axiosWithAuth';
 
 function App(props) {
   const [friends, setFriends] = useState([])
+  const [loggedIn, setLoggedIn] = useState(false);
 
   useEffect(() => {
       axiosWithAuth()
           .get('/api/friends')
           .then(res => {
               console.log(res)
+              setLoggedIn(true)
               setFriends(res.data)
           })
           .catch(err => console.log("Error fetching data: ", err))
-  }, [])
+  }, [loggedIn])
 
   const addFriend = friend => {
     const newFriend = {
@@ -41,10 +43,30 @@ function App(props) {
       .catch(err => console.log('Error adding friend:', err))
   }
 
+  const deleteFriend = id => {
+    axiosWithAuth()
+      .delete(`/api/friends/${id}`)
+      .then(res => {
+        console.log('Successfully deleted friend', res)
+        setFriends([...res.data])
+      })
+      .catch(err => console.log('Error deleting friend', err))
+  }
+
+  const editFriend = (id, friend) => {
+    axiosWithAuth()
+      .put(`/api/friends/${id}`, friend)
+      .then(res => {
+        console.log('Successfully updated friend', res)
+        //setFriends
+      })
+      .catch(err => console.log('Error updating friend:', err))
+  }
+
 
 
   return (
-    <FriendContext.Provider value={{ friends, addFriend }}>
+    <FriendContext.Provider value={{ friends, loggedIn, setLoggedIn, addFriend, deleteFriend, editFriend }}>
       <div className="App">
         <Header />
         <Switch>
