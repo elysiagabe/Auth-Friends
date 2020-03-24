@@ -6,6 +6,7 @@ import './App.css';
 import Header from './components/Header';
 import LoginForm from './components/LoginForm';
 import FriendsList from './components/FriendsList';
+import PrivateRoute from './components/PrivateRoute';
 
 function App(props) {
   return (
@@ -13,7 +14,7 @@ function App(props) {
       <Header />
       <Switch>
         {/* Change Friends route to private route */}
-        <Route path="/friends" component={FriendsList} />
+        <PrivateRoute path="/friends" component={FriendsList} />
         <Route path="/" component={LoginForm} />
       </Switch>
     </div>
