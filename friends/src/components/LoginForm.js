@@ -26,6 +26,8 @@ const LoginForm = (props) => {
             .catch(err => console.log('There was an error logging in: ', err))
     }
 
+    console.log('location:', props.location)
+
     return (
         <form onSubmit={login} >
             <label htmlFor="username">Username</label>
