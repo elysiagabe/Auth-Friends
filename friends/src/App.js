@@ -58,12 +58,10 @@ function App(props) {
       .put(`/api/friends/${id}`, friend)
       .then(res => {
         console.log('Successfully updated friend', res)
-        //setFriends
+        setFriends([...res.data])
       })
       .catch(err => console.log('Error updating friend:', err))
   }
-
-
 
   return (
     <FriendContext.Provider value={{ friends, loggedIn, setLoggedIn, addFriend, deleteFriend, editFriend }}>
