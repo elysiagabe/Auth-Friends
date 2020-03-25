@@ -1,4 +1,5 @@
 import React, { useState, useContext } from 'react';
+import { Link } from 'react-router-dom';
 import { FriendContext } from '../contexts/FriendContext';
 
 const AddFriendForm = () => {
@@ -30,8 +31,8 @@ const AddFriendForm = () => {
     console.log(friends)
 
     return (
-        <div>
-            <h3>Add a New Friend</h3>
+        <div className="add-form">
+            <h2>Add a New Friend</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="name">Name</label>
                 <input 
@@ -62,7 +63,7 @@ const AddFriendForm = () => {
 
                 <button type="submit">Add Friend</button>
             </form>
-            <p>&larr; Back to My Friends</p>
+            <Link to="/friends" className="add-form-link">&larr; Back to My Friends</Link>
         </div>
     )
 }

@@ -102,7 +102,8 @@ header {
   width: 30%;
 }
 
-.login-form label {
+.login-form label,
+.add-form label {
   color: #1B3A5D;
   font-size: 1.4rem;
   font-weight: bold;
@@ -110,7 +111,8 @@ header {
   letter-spacing: 1px;
 }
 
-.login-form input {
+.login-form input,
+.add-form input {
   border: none;
   font-size: 1.8rem;
   padding: 6px;
@@ -118,11 +120,13 @@ header {
   border: 1px solid lightgrey;
 }
 
-.login-form input:focus {
+.login-form input:focus,
+.add-form input:focus {
   border: 1px solid #1B3A5D;
 }
 
-.login-form button {
+.login-form button,
+.add-form button {
   background-color: #1B3A5D;
   border: 2px solid #1B3A5D;
   font-size: 1.6rem;
@@ -134,7 +138,8 @@ header {
   width: 50%;
 }
 
-.login-form button:hover {
+.login-form button:hover,
+.add-form button:hover {
   background-color: white;
   color: #1B3A5D;
 }
@@ -194,3 +199,27 @@ header {
   color: white;
 }
 
+/* ADD FRIEND FORM */
+.add-form h2 {
+  text-align: center;
+}
+
+.add-form form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.add-form button {
+  width: 100%;
+}
+
+.add-form-link {
+  color: #94ACBE;
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: 40px;
+}
