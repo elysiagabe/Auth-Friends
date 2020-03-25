@@ -6,14 +6,16 @@ const FriendsList = () => {
     const { friends } = useContext(FriendContext);
 
     return (
-        <div className="friend-list">
-            <h2>My Friends</h2>
-            {friends.map(friend => {
-                return <Friend 
-                    key={friend.id}
-                    friend={friend}
-                />
-            })}
+        <div>
+            <h2 className="my-friends">My Friends</h2>
+            <div className="friend-list">
+                {friends.map(friend => {
+                    return <Friend 
+                        key={friend.id}
+                        friend={friend}
+                    />
+                })}
+            </div>
         </div>
     )
 }

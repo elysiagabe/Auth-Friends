@@ -26,15 +26,16 @@ const Friend = ({friend}) => {
 
     return (
         
-            <div className="friend border">
+            <div className="friend-card">
                 {!isEditing ?
                 <div>
-                <p className="border"> {friend.name}, {friend.age} years old </p>
-                <p className="border">Email: {friend.email}</p>
-                <div>
-                    <button onClick={() => setIsEditing(true)}>Edit</button>{/* This button will set isEditing to true and show modal? */}
-                    <button onClick={() => deleteFriend(friend.id)}>Delete</button>
-                </div> 
+                    <h3>{friend.name}</h3>
+                    <p>Age: {friend.age} years old</p>
+                    <p><i class="fas fa-envelope"></i> {friend.email}</p>
+                    <div class="buttons">
+                        <button onClick={() => setIsEditing(true)}><i class="fas fa-user-edit"></i>Edit</button>{/* This button will set isEditing to true and show modal? */}
+                        <button onClick={() => deleteFriend(friend.id)}><i class="fas fa-trash-alt"></i>Delete</button>
+                    </div> 
                 </div>
                 :
                 <form onSubmit={handleUpdate}>
