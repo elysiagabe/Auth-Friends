@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { axiosWithAuth } from '../utils/axiosWithAuth';
 import { FriendContext } from '../contexts/FriendContext';
+import Friends from '../assets/friends.png';
 
 const LoginForm = (props) => {
     const { setLoggedIn } = useContext(FriendContext);
@@ -33,27 +34,31 @@ const LoginForm = (props) => {
     console.log('location:', props.location)
 
     return (
-        <form onSubmit={login} >
-            <label htmlFor="username">Username</label>
-            <input 
-                type="text"
-                name="username"
-                id="username"
-                value={credentials.username}
-                onChange={handleInputChange}
-            />
+        <div className="login-page">
+            <form className="login-form" onSubmit={login} >
+                <h2>Stay up to date with all your friends</h2>
+                <label htmlFor="username">Username</label>
+                <input 
+                    type="text"
+                    name="username"
+                    id="username"
+                    value={credentials.username}
+                    onChange={handleInputChange}
+                />
 
-            <label htmlFor="password">Password</label>
-            <input 
-                type="password"
-                name="password" 
-                id="password"
-                value={credentials.password}
-                onChange={handleInputChange}
-            />
+                <label htmlFor="password">Password</label>
+                <input 
+                    type="password"
+                    name="password" 
+                    id="password"
+                    value={credentials.password}
+                    onChange={handleInputChange}
+                />
 
-            <button type="submit">Login</button>
-        </form>
+                <button type="submit">Log In</button>
+            </form>
+            <img src={Friends} alt="illustration of 3 friends facing away holding up peace signs" />
+        </div>
     )
 }
 

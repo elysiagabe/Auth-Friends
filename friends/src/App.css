@@ -1,40 +1,139 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+/* BASE STYLES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  font-size: 62.5%;
+  font-family: 'Karla', sans-serif;
+  color: #272727;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*:focus {
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+  font-size: 4rem;
+  padding: 20px;
+  color: #1B3A5D;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 20px;
+  color: #1B3A5D;
+}
+
+p {
+  font-size: 1.6rem;
+}
+
+/* HEADER STYLES */
+header {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  justify-content: space-between;
+  /* padding: 0 30px; */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-button {
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: 2px solid #1B3A5D;
+  color: #1B3A5D;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  margin-right: 20px;
+}
+
+.header-button:hover {
+  background-color: #1B3A5D;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.header-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 30px;
+  padding-bottom: 4px;
+  color: #94ACBE;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.header-link:hover {
+  color: #1B3A5D;
+}
+
+.active-header-link {
+  color: #1B3A5D;
+  border-bottom: 2px solid #1B3A5D;
+}
+
+/* LOGIN PAGE STYLES */
+.login-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.login-page img {
+  width: 45%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.login-form label {
+  color: #1B3A5D;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.login-form input {
+  border: none;
+  font-size: 1.8rem;
+  padding: 6px;
+  margin-bottom: 16px;
+  border: 1px solid lightgrey;
+}
+
+.login-form input:focus {
+  border: 1px solid #1B3A5D;
+}
+
+.login-form button {
+  background-color: #1B3A5D;
+  border: 2px solid #1B3A5D;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 50%;
+}
+
+.login-form button:hover {
+  background-color: white;
+  color: #1B3A5D;
+}
+
+/* FRIEND LIST STYLES */
+.friend-list h2 {
+  text-align: center;
 }
 
 .friend {

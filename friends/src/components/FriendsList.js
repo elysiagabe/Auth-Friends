@@ -6,7 +6,7 @@ const FriendsList = () => {
     const { friends } = useContext(FriendContext);
 
     return (
-        <div>
+        <div className="friend-list">
             <h2>My Friends</h2>
             {friends.map(friend => {
                 return <Friend 

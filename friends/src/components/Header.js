@@ -16,12 +16,12 @@ const Header = () => {
             <h1>The Friends App</h1>
             {loggedIn ? 
                 <div>
-                <NavLink to="/friends">My Friends</NavLink>
-                <NavLink to="/addfriend">Add Friend</NavLink>
-                <button onClick={logout}>Logout</button>
+                    <NavLink to="/friends" activeClassName="active-header-link" className="header-link">My Friends</NavLink>
+                    <NavLink to="/addfriend" activeClassName="active-header-link" className="header-link">Add Friend</NavLink>
+                    <button onClick={logout} className="header-button">Log Out</button>
                 </div>   
                 :
-                <p>Login</p>  
+                <NavLink to="/" className="header-button">Log In</NavLink>  
             }
         </header>
     )
