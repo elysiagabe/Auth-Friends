@@ -199,6 +199,61 @@ header {
   color: white;
 }
 
+/* UPDATE FRIEND FORM */
+.update-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.update-form label {
+  color: #1B3A5D;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  display: inline-block;
+  width: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.update-form input {
+  border: none;
+  font-size: 1.4rem;
+  padding: 2px;
+  margin-bottom: 16px;
+  border: 1px solid lightgrey;
+  width: 200px;
+
+}
+
+.update-form input:focus {
+  border: 1px solid #1B3A5D;
+}
+
+.update-form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-form button {
+  background-color: #1B3A5D;
+  border: 2px solid #1B3A5D;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 48%;
+}
+
+.update-form button:hover {
+  background-color: #234B79;
+}
+
 /* ADD FRIEND FORM */
 .add-form h2 {
   text-align: center;

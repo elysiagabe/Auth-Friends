@@ -38,35 +38,44 @@ const Friend = ({friend}) => {
                     </div> 
                 </div>
                 :
-                <form onSubmit={handleUpdate}>
-                    <label htmlFor="name">Name</label>
-                    <input 
-                        type="text"
-                        name="name"
-                        id="name"
-                        value={updatedFriend.name}
-                        onChange={handleChanges}
-                    />
+                <form className="update-form" onSubmit={handleUpdate}>
+                    <div>
+                        <label htmlFor="name">Name</label>
+                        <input 
+                            type="text"
+                            name="name"
+                            id="name"
+                            value={updatedFriend.name}
+                            onChange={handleChanges}
+                        />
+                    </div>
 
-                    <label htmlFor="age">Age</label>
-                    <input 
-                        type="number"
-                        name="age"
-                        id="age"
-                        value={updatedFriend.age}
-                        onChange={handleChanges}
-                    />
+                    <div>
+                        <label htmlFor="age">Age</label>
+                        <input 
+                            type="number"
+                            name="age"
+                            id="age"
+                            value={updatedFriend.age}
+                            onChange={handleChanges}
+                        />
+                    </div>
 
-                    <label htmlFor="email">Email</label>
-                    <input 
-                        type="text"
-                        name="email"
-                        id="email"
-                        value={updatedFriend.email}
-                        onChange={handleChanges}
-                    />
-                    <button type="Submit">Update</button>
-                    <button onClick={() => setIsEditing(false)}>Cancel</button>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input 
+                            type="text"
+                            name="email"
+                            id="email"
+                            value={updatedFriend.email}
+                            onChange={handleChanges}
+                        />
+                    </div>
+
+                    <div className="update-form-buttons">
+                        <button type="Submit">Update</button>
+                        <button onClick={() => setIsEditing(false)}>Cancel</button>
+                    </div>
                 </form>
 }
 
