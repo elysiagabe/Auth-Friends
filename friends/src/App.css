@@ -1,0 +1,280 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400,700&display=swap');
+
+/* BASE STYLES */
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  max-width: 100%;
+  font-size: 62.5%;
+  font-family: 'Karla', sans-serif;
+  color: #272727;
+}
+
+*:focus {
+  outline: none;
+}
+
+h1 {
+  font-size: 4rem;
+  padding: 20px;
+  color: #1B3A5D;
+}
+
+h2 {
+  font-size: 3.2rem;
+  padding-bottom: 20px;
+  color: #1B3A5D;
+}
+
+h3 {
+  font-size: 2rem;
+  color: #1B3A5D;
+  padding-bottom: 16px;
+}
+
+p {
+  font-size: 1.6rem;
+  list-style: 1.4;
+  padding-bottom: 6px;
+}
+
+/* HEADER STYLES */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  /* padding: 0 30px; */
+  width: 90%;
+  margin: 0 auto;
+}
+
+.header-button {
+  font-size: 1.6rem;
+  font-weight: bold;
+  border: 2px solid #1B3A5D;
+  color: #1B3A5D;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 4px 10px;
+  margin-right: 20px;
+}
+
+.header-button:hover {
+  background-color: #1B3A5D;
+  color: white;
+}
+
+.header-link {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 30px;
+  padding-bottom: 4px;
+  color: #94ACBE;
+}
+
+.header-link:hover {
+  color: #1B3A5D;
+}
+
+.active-header-link {
+  color: #1B3A5D;
+  border-bottom: 2px solid #1B3A5D;
+}
+
+/* LOGIN PAGE STYLES */
+.login-page {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row-reverse;
+}
+
+.login-page img {
+  width: 45%;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+}
+
+.login-form label,
+.add-form label {
+  color: #1B3A5D;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+}
+
+.login-form input,
+.add-form input {
+  border: none;
+  font-size: 1.8rem;
+  padding: 6px;
+  margin-bottom: 16px;
+  border: 1px solid lightgrey;
+}
+
+.login-form input:focus,
+.add-form input:focus {
+  border: 1px solid #1B3A5D;
+}
+
+.login-form button,
+.add-form button {
+  background-color: #1B3A5D;
+  border: 2px solid #1B3A5D;
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: white;
+  padding: 8px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 50%;
+}
+
+.login-form button:hover,
+.add-form button:hover {
+  background-color: white;
+  color: #1B3A5D;
+}
+
+/* FRIEND LIST STYLES */
+.my-friends {
+  text-align: center;
+}
+
+.friend-list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+}
+
+.friend-card {
+  width: 30%;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 32px;
+  text-align: center;
+  border: 2px solid #94ACBE;
+  box-shadow: 4px 4px #94ACBE;
+}
+
+.fa-envelope {
+  font-size: 1.4rem;
+  padding-right: 6px;
+}
+
+.buttons {
+  padding-top: 16px;
+}
+
+.buttons button {
+  font-size: 1.4rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  padding: 8px 12px;
+  margin: 0 16px;
+  background-color: #1B3A5D;
+  color: white;
+}
+
+.buttons button:hover {
+  background-color: #234B79;
+}
+
+.fa-trash-alt,
+.fa-user-edit {
+  font-size: 1.4rem;
+  margin-right: 8px;
+  color: white;
+}
+
+/* UPDATE FRIEND FORM */
+.update-form {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: space-between;
+}
+
+.update-form label {
+  color: #1B3A5D;
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 6px;
+  letter-spacing: 1px;
+  display: inline-block;
+  width: 50px;
+  text-align: right;
+  padding-right: 10px;
+}
+
+.update-form input {
+  border: none;
+  font-size: 1.4rem;
+  padding: 2px;
+  margin-bottom: 16px;
+  border: 1px solid lightgrey;
+  width: 200px;
+
+}
+
+.update-form input:focus {
+  border: 1px solid #1B3A5D;
+}
+
+.update-form-buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.update-form button {
+  background-color: #1B3A5D;
+  border: 2px solid #1B3A5D;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: white;
+  padding: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  width: 48%;
+}
+
+.update-form button:hover {
+  background-color: #234B79;
+}
+
+/* ADD FRIEND FORM */
+.add-form h2 {
+  text-align: center;
+}
+
+.add-form form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+
+.add-form button {
+  width: 100%;
+}
+
+.add-form-link {
+  color: #94ACBE;
+  font-size: 1.6rem;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+  margin: 40px;
+}
